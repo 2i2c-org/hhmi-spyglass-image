@@ -3,8 +3,6 @@
 name: spyglass
 channels:
   - conda-forge
-  - conda-forge
-  - defaults
   - franklab
   - edeno
 dependencies:
