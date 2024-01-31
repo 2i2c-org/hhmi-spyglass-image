@@ -11,6 +11,7 @@ dependencies:
   - jupyter_contrib_nbextensions==0.5.1
   - jupyterlab-git
   - nbgitpuller=1.1.*
+  - opencv
 
   - pip
   - pip:
