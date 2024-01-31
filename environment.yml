@@ -11,8 +11,32 @@ dependencies:
   - jupyter_contrib_nbextensions==0.5.1
   - jupyterlab-git
   - nbgitpuller=1.1.*
-  - opencv
-
+  - pydotplus
+  - dask
   - pip
+  - position_tools
+  - numpy<1.24
+  - track_linearization>=2.3
+  - ripple_detection
+  - non_local_detector
+  - matplotlib
+  - seaborn
+  - bottleneck
+  - ipympl
+  - tqdm
+  - pyfftw<=0.12.0  # used by ghostipy. install from conda-forge so that it works on Mac ARM processors
   - pip:
+      - pubnub<6.4.0
+      - spikeinterface>=0.98.2,<0.99
+      - pynwb>=2.2.0,<3
+      - hdmf>=3.4.6
+      - datajoint>=0.13.6
+      - ghostipy
+      - pymysql
+      - sortingview>=0.11
+      - figurl-jupyter
+      - git+https://github.com/LorenFrankLab/ndx-franklab-novela.git
+      - pyyaml
+      - click
+      - "black[jupyter]"
       - spyglass-neuro
