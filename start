@@ -1,19 +1,19 @@
 #!/bin/bash
 
 MYSQL_AVAILABLE=$(command -v mysql &> /dev/null)
-SQL_FILE="/home/jovyan/shared-public/prepopulate.sql"
+SQL_FILE="/home/jovyan/shared-readonly/SpyglassPrepopulate.sql"
 
 if $MYSQL_AVAILABLE && [ -f "$SQL_FILE" ]; then
-    echo "Populating:  YES."
-    mysql -h localhost -u root --password=tutorial < "$SQL_FILE"
+    echo "Populating:  YES." >> /home/joyvan/log.txt
+    mysql -h 127.0.0.1 -u root --password=tutorial < "$SQL_FILE"
     MYSQL_EXIT_STATUS=$?
     if [ $MYSQL_EXIT_STATUS -ne 0 ]; then
-        echo "Populating: ERROR. $MYSQL_EXIT_STATUS"
+        echo "Populating: ERROR. $MYSQL_EXIT_STATUS"  >> /home/joyvan/log.txt
     fi
 elif ! $SQL_FILE_EXISTS; then
-    echo "Populating:  NO. Executable not found"
+    echo "Populating:  NO. Executable not found"  >> /home/joyvan/log.txt
 else
-    echo "Populating:  NO. SQL file not found"
+    echo "Populating:  NO. SQL file not found"  >> /home/joyvan/log.txt
 fi
 
 exec "$@" 
