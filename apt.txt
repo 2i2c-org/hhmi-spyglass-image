@@ -1,3 +1,4 @@
 # needed for OpenCV (see https://github.com/berkeley-dsep-infra/datahub/blob/staging/deployments/cee/image/apt.txt)
 libgl1-mesa-glx
 graphviz
+mysql-client
